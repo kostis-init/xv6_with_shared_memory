@@ -1,13 +1,9 @@
 # xv6_with_shared_memory
-
+###### This was an assignment for the class of Operating Systems in DIT @ University of Athens (2017).
 * [xv6 kernel](src/xv6/README) improved with the feature of **shared memory** using **semaphores**
 
-###### This was an assignment for the class of Operating Systems in DIT @ University of Athens (2017)
-
 ## Source Code
-
-###### New files have been added and some existing code has been updated
-
+###### New files have been added and some existing code has been updated.
 * [shmem.c](src/xv6/shmem.c): 
   * shared memory implementation
 * [sem.c](src/xv6/sem.c): 
@@ -21,16 +17,30 @@
 * [syscall.c](src/xv6/syscall.c): 
   * changed argptr to accept pointers to high addresses (shared memory)
 * [sysproc.c](src/xv6/sysproc.c):
-  * new syscalls (shmget, shmrem, sem_init, sem_up, sem_down)
+  * added syscalls (shmget, shmrem, sem_init, sem_up, sem_down)
 
-## Testing
+## Build & Run
+###### Check the instructions in the original [README](src/xv6/README#L42-L49).
+```
+$ cd ./src/xv6
+$ make
+$ make qemu-nox
+```
 
+## Test
+###### Test xv6 with [test.c](src/xv6/test.c) and [test2.c](src/xv6/test2.c) or create new workloads.
 #### Fork
-
 * [test.c](src/xv6/test.c): 
-  * `$test`
-
+```
+// We are inside QEMU running our kernel
+$ test
+```
 #### Multiple processes
-
 * [test2.c](src/xv6/test2.c):
-  * `$test2&;test2&;test2&`
+```
+// We are inside QEMU running our kernel
+$ test2&;test2&;test2&
+```
+
+## Exit
+###### Terminate QEMU by pressing Ctrl-A X
