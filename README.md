@@ -9,7 +9,8 @@
 * [sem.c](src/xv6/sem.c): 
   * semaphores implementation
 * [proc.c](src/xv6/proc.c): 
-  * changed fork to copy the addresses under the KERNBASE memory (copyuvm) - changed exit
+  * changed fork to copy the addresses under the KERNBASE memory (copyuvm)
+  * changed exit
 * [vm.c](src/xv6/vm.c): 
   * changed copyuvm to copy high addresses
   * changed deallocuvm to not kfree a shared page if it is being used from another proccess
