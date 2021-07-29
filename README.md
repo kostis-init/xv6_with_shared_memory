@@ -1,6 +1,6 @@
 # xv6_with_shared_memory
 ###### This was an assignment for the class of Operating Systems in DIT @ University of Athens (2017).
-* [xv6 kernel](src/xv6/README) improved with the feature of **shared memory** using **semaphores**
+* Modified [xv6 kernel](src/xv6/README) adding **shared memory** & **semaphores**
 
 ## Source Code
 ###### New files have been added and some existing code has been updated.
